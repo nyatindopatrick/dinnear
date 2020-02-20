@@ -1,10 +1,24 @@
 @import vars
 
-@mixin flex($direction)
+*
+    margin: 0PX
+    padding: 0px
+    box-sizing: border-box
+
+body
+    padding: 0px
+    margin: 0px
+
+@mixin flex($direction, $position)
     display: flex
     flex-direction: $direction
-    justify-content: center
+    justify-content: $position
     align-items: center
+
+@mixin grid($cols, $height)
+    display: grid
+    grid-template-columns: $cols
+    height: $height
 
 nav
     background-color: $red
@@ -37,27 +51,153 @@ nav
 .hero
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) ),url(https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
     height: 60vh
-    @include flex(column)
+    @include flex(column, center)
     color: white
 
 .search-area
-    @include flex(column)
+    @include flex(column, center)
     width: 55%
     background: rgba(255, 255, 255,0.7 )
     padding: 2% 1rem
     border-radius: 4px
-
     h5
         text-align: left !important
+        color: black
+        margin-left: 0px
 .input
     width: 100%
     display: flex
     outline: $red !important
-    &:focus
-        outline: $red !important
-        border: $red !important
+    input
+        &:focus
+            outline: none !important
+            border: $red !important
     button
         background: $red
         color: white
 .how-it-works
     background: white
+.steps
+    color: $red
+    h2
+        text-align: center
+.step-details
+    @include grid(repeat(2, 1fr) , auto )
+    grid-gap: 2rem
+    height: minmax(150px, auto)
+
+    div
+        @include flex(column, center)
+        text-align: center
+        color: black
+
+        img
+            width: 4rem
+.about
+    display: grid
+    grid-template-rows: repeat(3, 1fr)
+    section
+        display: grid
+        align-items: center
+        height: 30vh
+        width: 100%
+.about-contents
+    margin: auto 2rem
+    color: white
+    display: grid
+    grid-template-columns: 4fr 1fr
+    align-items: center
+    img
+        float: right
+        width: 200px
+        height: 200px
+        border-radius: 100%
+
+.about-one
+    background: $red
+
+.about-two
+    background: $grey
+.about-three
+    background: $blue
+.footer
+    background: black
+    color: white
+    width: 100%
+    height: 100%
+.footer-top
+    @include flex(row, center )
+    width: 70%
+    flex-wrap: nowrap
+    margin: 0 auto
+    ul
+        list-style: none
+        @include flex(row, center )
+        width: 100%
+        margin: auto
+
+        li
+            padding: 15px
+.footer-logo
+    width: 5rem
+    border-radius: 100%
+    border: 1px solid rgba(255, 255, 255,0.25)
+    margin: 0px
+    animation: logo 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite
+    img
+        width: 3rem
+        height: 3rem
+        padding: 5px
+
+.footer-list-one
+    display: flex
+    justify-content: flex-end
+    border-top: 1px solid rgba(255, 255, 255,0.25)
+    border-bottom: 1px solid rgba(255, 255, 255,0.25)
+
+.footer-list-two
+    display: flex
+    justify-content: flex-start
+    border-top: 1px solid rgba(255, 255, 255,0.25)
+    border-bottom: 1px solid rgba(255, 255, 255,0.25)
+
+@keyframes logo
+    0%
+        transform: translateY(0)
+    50%
+        transform: translateY(-20px)
+    100%
+        transform: translateY(0)
+.footer-middle
+    @include grid(repeat(3, 1fr) , minmax(200px, auto) )
+    justify-content: center
+    input
+        width: 90%
+        background: black
+        border: 1px solid rgba(255, 255, 255,0.25)
+        &:focus
+            background: black
+    button
+        background: grey
+        color:
+    div
+        @include flex(column , center )
+        text-align: center
+    section
+        justify-content: center
+    a
+        color: $red
+        text-decoration: none
+.footer-bottom 
+    height: 5vh
+    background: #1f1f1f
+    width: 100%
+    justify-content: space-between
+    ul 
+        @include flex(row, flex-start )
+    li
+        padding: 0 7px
+        a 
+            color: white
+.copyright
+    justify-content: center
