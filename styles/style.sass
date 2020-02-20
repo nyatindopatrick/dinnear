@@ -1,0 +1,63 @@
+@import vars
+
+@mixin flex($direction)
+    display: flex
+    flex-direction: $direction
+    justify-content: center
+    align-items: center
+
+nav
+    background-color: $red
+    display: grid !important
+    grid-template-columns: repeat(2,1fr)
+    justify-content: center
+    height: 8vh
+    max-width: 100%!important
+    align-items: center
+
+    a
+        color: white
+
+        &:hover
+            color: white
+            text-decoration: none
+
+    img
+        width: 10rem
+        margin: auto
+    ul
+        display: flex
+        position: relative !important
+        right: 1rem !important
+        list-style: none
+        margin: auto
+    li
+        padding: 0 1rem
+
+.hero
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) ),url(https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+    height: 60vh
+    @include flex(column)
+    color: white
+
+.search-area
+    @include flex(column)
+    width: 55%
+    background: rgba(255, 255, 255,0.7 )
+    padding: 2% 1rem
+    border-radius: 4px
+
+    h5
+        text-align: left !important
+.input
+    width: 100%
+    display: flex
+    outline: $red !important
+    &:focus
+        outline: $red !important
+        border: $red !important
+    button
+        background: $red
+        color: white
+.how-it-works
+    background: white
