@@ -418,4 +418,9 @@ nav li {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+.made-by {
+  color: #d35649;
+  text-decoration: none;
+}
 /*# sourceMappingURL=style.css.map */
