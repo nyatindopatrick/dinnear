@@ -20,7 +20,7 @@ body
     grid-template-columns: $cols
     height: $height
 
-nav
+.nav
     background-color: $red
     display: grid !important
     grid-template-columns: repeat(2,1fr)
@@ -28,14 +28,11 @@ nav
     height: 8vh
     max-width: 100%!important
     align-items: center
-
     a
         color: white
-
         &:hover
             color: white
             text-decoration: none
-
     img
         width: 10rem
         margin: auto
@@ -64,35 +61,9 @@ nav
         text-align: left !important
         color: black
         margin-left: 0px
-.input
-    width: 100%
-    display: flex
-    outline: $red !important
-    input
-        &:focus
-            outline: none !important
-            border: $red !important
-    button
-        background: $red
-        color: white
 .how-it-works
     background: white
-.steps
-    color: $red
-    h2
-        text-align: center
-.step-details
-    @include grid(repeat(2, 1fr) , auto )
-    grid-gap: 2rem
-    height: minmax(150px, auto)
 
-    div
-        @include flex(column, center)
-        text-align: center
-        color: black
-
-        img
-            width: 4rem
 .about
     display: grid
     grid-template-rows: repeat(3, 1fr)
@@ -120,24 +91,34 @@ nav
     background: $grey
 .about-three
     background: $blue
+.steps
+    color: $red
+    h2
+        text-align: center
+.step-details
+    @include grid(repeat(2, 1fr) , auto )
+    grid-gap: 2rem
+    div
+        @include flex(column, center)
+        text-align: center
+        color: black
+
+        img
+            width: 4rem
 .footer
     background: black
     color: white
     width: 100%
-
-.footer-top
-    @include flex(row, center )
-    width: 70%
-    flex-wrap: nowrap
-    margin: 0 auto
+.footer-bottom
+    background: #1f1f1f
+    width: 100%
+    justify-content: space-between
     ul
-        list-style: none
-        @include flex(row, center )
-        width: 100%
-        margin: auto
-
-        li
-            padding: 15px
+        @include flex(row, flex-start )
+    li
+        padding: 0 7px
+        a
+            color: white
 .footer-logo
     width: 5rem
     border-radius: 100%
@@ -157,6 +138,19 @@ nav
     justify-content: flex-start
     border-top: 1px solid rgba(255, 255, 255,0.25)
     border-bottom: 1px solid rgba(255, 255, 255,0.25)
+.footer-top
+    @include flex(row, center )
+    width: 70%
+    flex-wrap: nowrap
+    margin: 0 auto
+    ul
+        list-style: none
+        @include flex(row, center )
+        width: 100%
+        margin: auto
+
+        li
+            padding: 15px
 
 @keyframes logo
     0%
@@ -182,22 +176,14 @@ nav
         text-align: center
     section
         justify-content: center
+        text-align: center
     a
         color: $red
         text-decoration: none
         &:hover
             color: $red
             text-decoration: none
-.footer-bottom
-    background: #1f1f1f
-    width: 100%
-    justify-content: space-between
-    ul
-        @include flex(row, flex-start )
-    li
-        padding: 0 7px
-        a
-            color: white
+
 .copyright
     justify-content: center
 .made-by
@@ -211,10 +197,26 @@ nav
     button
         height: 2.3rem
         margin-right: 5px
-    label 
+    label
         margin-right: 5px
         margin-left: 5px
-
+.input
+    width: 100%
+    display: flex
+    outline: $red !important
+    input
+        &:focus
+            outline: none !important
+            border: $red !important
+    button
+        background: $red
+        color: white
+.input-footer
+    display: flex
+    flex-direction: row !important
+    justify-content: center
+    h5
+        text-align: center !important
 .results
     @include grid(repeat(3, 1fr) , auto)
     grid-gap: 2rem
@@ -237,7 +239,15 @@ nav
         h5
             padding: 50% 0px
 
-@keyframes results
+.detail-items
+    @include grid(repeat(2,1fr) , auto )
+    grid-gap: 1rem
+    margin: 1rem
+
+.book
+    justify-content: flex-end
+
+
 
 @media screen and (min-width: 768px) and (max-width: 1024px) 
     nav
@@ -293,7 +303,8 @@ nav
         i
             right: 19%
             margin-top: -2rem !important
-
+    .btn-search
+        margin-top: 1rem
     .steps
         h2
             font-size: 1.8rem
@@ -306,7 +317,7 @@ nav
         img
             float: right
             width: 120px
-            height: 200px
+            height: 120px
             border-radius: 0px
             margin: 2px 5px
     .footer-top
@@ -328,8 +339,17 @@ nav
     .results
         @include grid(1fr , auto)
     .filter-section
-        h2 
+        h2
             font-size: 1.5rem
     .results-section
-        h2 
+        h2
             font-size: 1.5rem
+    .detail-items
+        @include grid(1fr , auto )
+        grid-gap: 1rem
+        margin: 1rem
+    .book
+        justify-content: flex-end
+        button
+            width: 100%
+            margin: 1rem

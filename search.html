@@ -13,7 +13,7 @@
             crossorigin="anonymous">
     </head>
     <body>
-        <nav>
+        <nav class="nav">
             <a class="ml-md-5 ml-lg-5 ml-0 my-lg-auto my-md-auto my-1"
                 href="/index.html"> <img
                     src="images/logo.png" alt="">
@@ -50,36 +50,36 @@
                     mx-auto">
                     <label for="name">
                         NAME:
-                        <div class="input">
-                            <input class="form-control" type="text" name="name">
-                        </div>
+                        <input id="name" class="form-control" type="text"
+                            name="name">
                     </label>
                     <label for="location">
                         LOCATION:
-                        <div class="input">
-                            <input class="form-control" type="text"
+                        <span class="input">
+                            <input id="location" class="form-control"
+                                type="text"
                                 name="location"><span><i
                                     class="fas fa-chevron-down position-absolute
                                     ml-n4 mt-2"></i></span>
-                        </div>
+                        </span>
                     </label>
                     <label for="stars">
                         STARS:
-                        <div class="input">
-                            <input class="form-control" type="number"
+                        <span class="input">
+                            <input id="stars" class="form-control" type="number"
                                 name="stars"><span><i
                                     class="fas fa-chevron-down position-absolute
                                     ml-n4 mt-2"></i></span>
-                        </div>
+                        </span>
                     </label>
-                    <label for="stars">
+                    <label for="price">
                         PRICE:
-                        <div class="input">
-                            <input class="form-control" type="number"
+                        <span class="input">
+                            <input id="price" class="form-control" type="number"
                                 name="price"><span><i
                                     class="fas fa-chevron-down position-absolute
                                     ml-n4 mt-2"></i></span>
-                        </div>
+                        </span>
                     </label>
                     <button type="submit" class="btn btn-primary btn-sm mt-4">Search</button>
                     <button type="reset" class="btn btn-warning btn-sm mt-4"><span><i
@@ -140,9 +140,9 @@
                     </ul>
                 </div>
                 <div class="footer-middle container">
-                    <div>
+                    <section>
                         <h5>SUBSCRIBE</h5>
-                        <section class="input input-footer">
+                        <div class="input input-footer">
                             <input class="form-control" type="email"
                                 name="email" placeholder="you@example.com">
                             <span>
@@ -150,8 +150,8 @@
                                     Send
                                 </button>
                             </span>
-                        </section>
-                    </div>
+                        </div>
+                    </section>
 
                     <div>
                         <h5>CONTACT</h5>
