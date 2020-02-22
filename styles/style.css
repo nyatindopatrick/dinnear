@@ -518,7 +518,7 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  nav ul span {
+  .nav ul span {
     display: none;
   }
 
@@ -560,7 +560,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  nav {
+  .nav {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -577,11 +577,11 @@ body {
     flex-basis: 1rem;
   }
 
-  nav ul {
+  .nav ul {
     right: 0 !important;
   }
 
-  nav ul span {
+  .nav ul span {
     display: none;
   }
 
