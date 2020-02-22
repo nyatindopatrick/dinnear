@@ -124,7 +124,6 @@ nav
     background: black
     color: white
     width: 100%
-    height: 100%
 
 .footer-top
     @include flex(row, center )
@@ -142,19 +141,16 @@ nav
 .footer-logo
     width: 5rem
     border-radius: 100%
-    border: 1px solid rgba(255, 255, 255,0.25)
     margin: 0px
     animation: logo 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite
-    img
-        width: 3rem
-        height: 3rem
-        padding: 5px
 
 .footer-list-one
     display: flex
     justify-content: flex-end
     border-top: 1px solid rgba(255, 255, 255,0.25)
     border-bottom: 1px solid rgba(255, 255, 255,0.25)
+    li
+        text-align: center
 
 .footer-list-two
     display: flex
@@ -189,19 +185,151 @@ nav
     a
         color: $red
         text-decoration: none
-.footer-bottom 
-    height: 5vh
+        &:hover
+            color: $red
+            text-decoration: none
+.footer-bottom
     background: #1f1f1f
     width: 100%
     justify-content: space-between
-    ul 
+    ul
         @include flex(row, flex-start )
     li
         padding: 0 7px
-        a 
+        a
             color: white
 .copyright
     justify-content: center
 .made-by
-    color: $red 
-    text-decoration: none 
+    color: $red
+    text-decoration: none
+    &:hover
+        color: $red
+        text-decoration: none
+.filter-section
+    background: $lightgrey
+    button
+        height: 2.3rem
+        margin-right: 5px
+    label 
+        margin-right: 5px
+        margin-left: 5px
+
+.results
+    @include grid(repeat(3, 1fr) , auto)
+    grid-gap: 2rem
+    div
+        background-size: 100% !important
+
+.result-item
+    background: rgba(0,0,0 ,0.9 )
+    margin: 0px
+    a
+        height: 100%
+        width: 100%
+        background: linear-gradient(rgba(0,0,0 ,0.5 ), rgba(0,0,0 ,0.5 ))
+        transition: 0.7s
+        text-decoration: none
+
+        &:hover
+            opacity: 0
+            text-decoration: none
+        h5
+            padding: 50% 0px
+
+@keyframes results
+
+@media screen and (min-width: 768px) and (max-width: 1024px) 
+    nav
+        ul
+            span
+                display: none
+    .steps
+        h2
+            font-size: 1.8rem
+    .step-details
+        @include grid(1fr , auto )
+    .footer
+        ul
+            width: 100%
+        div
+            width: 100%
+    .footer-top
+        ul
+            width: 100%
+            li
+                font-size: 0.9rem
+                padding: 8px
+    .filters
+        flex-direction: column
+
+@media ( max-width: 768px )
+    nav
+        display: flex !important
+        flex-direction: column
+        justify-content: center !important
+        height: auto
+        padding: 1rem 0px
+        flex-basis: 1rem
+        ul
+            right: 0px !important
+            span
+                display: none
+    .hero
+        h1
+            font-size: 1.5rem
+            width: 90%
+    .search-area
+        width: 90%
+        align-items: flex-start
+        h5
+            text-align: left !important
+            margin: 0px
+    .input
+        flex-direction: column
+        margin: 10px 0px
+        button
+            width: 100%
+        i
+            right: 19%
+            margin-top: -2rem !important
+
+    .steps
+        h2
+            font-size: 1.8rem
+    .step-details
+        @include grid(1fr , auto )
+    .about
+        section
+            height: auto
+    .about-contents
+        img
+            float: right
+            width: 120px
+            height: 200px
+            border-radius: 0px
+            margin: 2px 5px
+    .footer-top
+        flex-direction: column
+        ul
+            li
+                padding: 5px
+    .footer-middle
+        grid-template-columns: 1fr
+        grid-gap: 2rem
+
+    .footer-bottom
+        flex-direction: column
+        align-items: center
+    .input-footer
+        flex-direction: row
+    .filters
+        flex-direction: column
+    .results
+        @include grid(1fr , auto)
+    .filter-section
+        h2 
+            font-size: 1.5rem
+    .results-section
+        h2 
+            font-size: 1.5rem
