@@ -15,8 +15,8 @@
     <body>
         <nav class="nav">
             <a class="ml-md-5 ml-lg-5 ml-0 my-lg-auto my-md-auto my-1"
-                href="/index.html"> <img
-                    src="images/logo.png" alt="">
+                href="/index.html">
+                <img src="images/logo.png" alt="logo">
             </a>
 
             <ul class="my-lg-auto my-md-auto my-1">
@@ -42,10 +42,12 @@
                 </li>
             </ul>
         </nav>
+
         <main>
             <section class="filter-section my-lg-5 my-md-5 p-5">
-                <h2 class="text-center text_grey">Filter by location, name,
-                    stars, price</h2>
+                <h2 class="text-center text_grey">
+                    Filter by location, name, stars, price
+                </h2>
                 <form class="container d-flex justify-content-center filters
                     mx-auto">
                     <label for="name">
@@ -57,38 +59,54 @@
                         LOCATION:
                         <span class="input">
                             <input id="location" class="form-control"
-                                type="text"
-                                name="location"><span><i
-                                    class="fas fa-chevron-down position-absolute
-                                    ml-n4 mt-2"></i></span>
+                                type="text" name="location">
+                            <span>
+                                <i class="fas fa-chevron-down position-absolute
+                                    ml-n4 mt-2">
+                                </i>
+                            </span>
                         </span>
                     </label>
                     <label for="stars">
                         STARS:
                         <span class="input">
                             <input id="stars" class="form-control" type="number"
-                                name="stars"><span><i
-                                    class="fas fa-chevron-down position-absolute
-                                    ml-n4 mt-2"></i></span>
+                                name="stars">
+                            <span>
+                                <i class="fas fa-chevron-down position-absolute
+                                    ml-n4 mt-2">
+                                </i>
+                            </span>
                         </span>
                     </label>
                     <label for="price">
                         PRICE:
                         <span class="input">
                             <input id="price" class="form-control" type="number"
-                                name="price"><span><i
-                                    class="fas fa-chevron-down position-absolute
-                                    ml-n4 mt-2"></i></span>
+                                name="price">
+                            <span>
+                                <i class="fas fa-chevron-down position-absolute
+                                    ml-n4 mt-2">
+                                </i>
+                            </span>
                         </span>
                     </label>
-                    <button type="submit" class="btn bg__blue text-light btn-sm mt-4">Search</button>
-                    <button type="reset" class="btn bg__yellow text-light btn-clear btn-sm mt-4"><span><i
-                                class="fas fa-edit"></i></span> Clear filter</button>
+                    <button type="submit" class="btn bg__blue text-light btn-sm
+                        mt-4">
+                        Search
+                    </button>
+                    <button type="reset" class="btn bg__yellow text-light
+                        btn-clear btn-sm mt-4">
+                        <span>
+                            <i class="fas fa-edit"></i>
+                        </span> Clear filter
+                    </button>
                 </form>
             </section>
             <section class="results-section">
-                <h2 class="text-center text_grey">SEARCH RESULTS FOUND 10
-                    RESTAURANTS</h2>
+                <h2 class="text-center text_grey">
+                    SEARCH RESULTS FOUND 10 RESTAURANTS
+                </h2>
                 <div class="container">
                     <div class="results my-5">
                         <div class="d-flex result-item" style="background:
@@ -121,6 +139,7 @@
 
                 </div>
             </section>
+
             <footer class="footer">
                 <div class="container footer-top">
                     <ul class="footer-list-one my-lg-5 my-md-5 my-1">
@@ -139,6 +158,7 @@
                         <li><a href="#"></a>GOOGLE+</li>
                     </ul>
                 </div>
+
                 <div class="footer-middle container">
                     <section>
                         <h5>SUBSCRIBE</h5>
@@ -167,19 +187,32 @@
                             and meals served.</p>
                     </div>
                 </div>
+
                 <div class="footer-bottom d-flex w-100 px-3">
                     <ul class="list-unstyled my-auto px-4">
                         <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     </ul>
-                    <p class="text-center my-auto"> &copy; Dinnear <span
-                            id="year"></span></p>
-                    <p class="flex-end my-auto">Made with <span><i class="fas
-                                fa-heart"></i></span> by <a class="made-by"
-                            href="https://www.linkedin.com/in/nyatindopatrick/">Pato</a></p>
+                    <p class="text-center my-auto"> &copy; Dinnear
+                        <span id="year">
+                        </span>
+                    </p>
+                    <p class="flex-end my-auto">
+                        Made with
+                        <span>
+                            <i class="fas fa-heart">
+                            </i>
+                        </span>
+                        by
+                        <a class="made-by"
+                            href="https://www.linkedin.com/in/nyatindopatrick/">
+                            Pato
+                        </a>
+                    </p>
                 </div>
             </footer>
+            
         </main>
         <script>
             const year = () =>new Date().getFullYear();
