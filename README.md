@@ -14,7 +14,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://condescending-mclean-17a4a6.netlify.com)
+[Live Demo Link](https://dinnear.netlify.app)
 
 ## Getting Started
 
